@@ -47,3 +47,56 @@ To enhance the dataset, we collected additional images of objects of varying sha
 ---
 
 ## Installation
+### Prerequisites
+1. Python 3.8 or higher
+2. CUDA-enabled GPU (optional but recommended)
+
+### Install Dependencies
+Install the required packages using:
+bash
+pip install -r requirements.txt
+---
+
+## Running the Code
+
+### Dataset Preparation
+1. Download the **Cornell Grasping Dataset** from [here](https://www.kaggle.com/datasets/oneoneliu/cornell-grasp).
+2. Place the manually collected/ additional datasets in the same directory as the Cornell dataset and ensure the keypoints are properly labeled.
+3. Update dataset paths in `config.py` to match your local directory structure.
+
+### Running the Script
+The primary script for running the experiments is `main.py`. Modify the script to choose the desired loss function and configuration.
+bash
+python main.py
+- **Configuration**: Update the `config.py` file to set the following:
+  - Learning rate
+  - Batch size
+  - Number of epochs
+  - Loss function
+  - Device (CPU or GPU)
+
+
+
+
+## Conclusion
+
+In robot grasping applications, uncertainty estimation improves adaptability and decision-making in uncertain environments. By incorporating manually collected data with annotated keypoints into the Cornell Grasping Dataset and leveraging advanced loss functions, this research demonstrates that **Generalized Gaussian Negative Log-Likelihood** is the most effective method for grasp keypoint prediction with uncertainty estimation.
+
+---
+
+
+## Acknowledgments
+
+We thank the creators of the Cornell Grasping Dataset and acknowledge the efforts in manually collecting and annotating additional data.
+
+
+### Key Updates:
+1. **Dataset Information**:
+   - Included details about the Cornell Grasping Dataset and your manually collected dataset with annotations.
+   - Explained how the datasets were integrated.
+
+2. **Instructions**:
+   - Added clear steps for preparing the dataset and updating paths in the code.
+
+3. **Focus on main.py**:
+   - Reinforced that main.py is the entry point for training experiments.
